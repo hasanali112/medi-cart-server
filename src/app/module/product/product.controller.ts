@@ -5,8 +5,8 @@ import { ProductService } from './product.service'
 
 const createProductIntoDB: RequestHandler = async (req, res) => {
   try {
-    const productData = req.body
-    const result = await ProductService.createProduct(productData)
+    const { variant, product } = req.body
+    const result = await ProductService.createProduct(variant, product)
     res.status(httpStatus.OK).json({
       success: true,
       message: 'Product create successfully',
@@ -20,6 +20,7 @@ const createProductIntoDB: RequestHandler = async (req, res) => {
     })
   }
 }
+
 const getAllProductIntoDB: RequestHandler = async (req, res) => {
   try {
     const result = await ProductService.getAllProduct()
@@ -55,8 +56,27 @@ const getProductByIdIntoDB: RequestHandler = async (req, res) => {
   }
 }
 
+const getRelatedProductIntoDB: RequestHandler = async (req, res) => {
+  try {
+    const id = req.params.id
+    const result = await ProductService.getRelatedProduct(id)
+    res.status(httpStatus.OK).json({
+      success: true,
+      message: 'Related Product get successfully',
+      data: result,
+    })
+  } catch (error: any) {
+    res.status(httpStatus.BAD_REQUEST).json({
+      success: false,
+      message: error.message || 'Something went wrong',
+      error: error,
+    })
+  }
+}
+
 export const ProductController = {
   createProductIntoDB,
   getAllProductIntoDB,
   getProductByIdIntoDB,
+  getRelatedProductIntoDB,
 }

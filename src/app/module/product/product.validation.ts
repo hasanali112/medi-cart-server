@@ -9,7 +9,6 @@ export const productSchemaValidation = z.object({
   categories: z.string(),
   price: z.number(),
   discount: z.number(),
-  variant: z.string(),
   stockStatus: z.boolean(),
   status: z.enum(['active', 'inactive']),
   productStatus: z.enum(['New', 'Trending']),

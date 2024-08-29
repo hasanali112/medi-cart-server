@@ -9,7 +9,6 @@ export type TProduct = {
   categories: Types.ObjectId
   price: number
   discount: number
-  variant: Types.ObjectId
   stockStatus: boolean
   status: 'active' | 'inactive'
   productStatus: 'New' | 'Trending'

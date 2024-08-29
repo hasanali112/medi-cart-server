@@ -13,6 +13,10 @@ const variantSchema = new Schema<TVariant>(
       required: true,
       trim: true,
     },
+    product: {
+      type: Schema.Types.ObjectId,
+      required: true,
+    },
   },
   {
     timestamps: true,

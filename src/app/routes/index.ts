@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import { CategoryRoutes } from '../module/category/category.routes'
-import { VariantRoutes } from '../module/varient/variant.routes'
+
 import { ProductRoutes } from '../module/product/product.routes'
 import { userRoute } from '../module/user/user.routes'
 import { OrderRoutes } from '../module/order/order.routes'
@@ -12,10 +12,10 @@ const routes = [
     path: '/categories',
     router: CategoryRoutes,
   },
-  {
-    path: '/variants',
-    router: VariantRoutes,
-  },
+  // {
+  //   path: '/variants',
+  //   router: VariantRoutes,
+  // },
   {
     path: '/products',
     router: ProductRoutes,

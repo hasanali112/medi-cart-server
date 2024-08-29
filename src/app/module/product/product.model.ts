@@ -15,11 +15,6 @@ const productSchema = new Schema<TProduct>(
     },
     price: { type: Number, required: true },
     discount: { type: Number, required: true },
-    variant: {
-      type: Schema.Types.ObjectId,
-      ref: 'Variant',
-      required: true,
-    },
     stockStatus: { type: Boolean, required: true },
     status: { type: String, enum: ['active', 'inactive'], required: true },
     productStatus: { type: String, enum: ['New', 'Trending'] },
