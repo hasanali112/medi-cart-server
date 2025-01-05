@@ -11,6 +11,7 @@ export type TProduct = {
   discount: number
   stockStatus: boolean
   status: 'active' | 'inactive'
-  productStatus: 'New' | 'Trending'
+  productStatus: 'new' | 'popular'
+  flashSale: boolean
   totalReview: number
 }

@@ -11,7 +11,7 @@ app.use('/api/v1', middlewareRoutes)
 app.get('/', (req: Request, res: Response) => {
   res.status(httpStatus.OK).json({
     success: true,
-    message: 'Medi Cart server is running successfully',
+    message: 'UltraFit Gear server is running successfully',
   })
 })
 

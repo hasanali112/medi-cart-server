@@ -11,7 +11,8 @@ export const productSchemaValidation = z.object({
   discount: z.number(),
   stockStatus: z.boolean(),
   status: z.enum(['active', 'inactive']),
-  productStatus: z.enum(['New', 'Trending']),
+  productStatus: z.enum(['new', 'popular']),
+  flashSale: z.boolean(),
   totalReview: z.number().optional(),
 })
 

@@ -14,11 +14,7 @@ const categorySchema = new Schema<TCategory>(
       required: true,
       trim: true,
     },
-    categoryType: {
-      type: String,
-      enum: CategoryType,
-      required: true,
-    },
+
     thumbnail: {
       type: String,
       required: true,

@@ -17,7 +17,8 @@ const productSchema = new Schema<TProduct>(
     discount: { type: Number, required: true },
     stockStatus: { type: Boolean, required: true },
     status: { type: String, enum: ['active', 'inactive'], required: true },
-    productStatus: { type: String, enum: ['New', 'Trending'] },
+    productStatus: { type: String, enum: ['new', 'popular'] },
+    flashSale: { type: Boolean },
     totalReview: { type: Number },
   },
   {
